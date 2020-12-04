@@ -7,5 +7,5 @@ import (
 )
 
 func Test_Part1(t *testing.T) {
-	assert.Equal(t, 0, 0)
+	assert.Equal(t, Part1("input.txt"), []int{1941})
 }
