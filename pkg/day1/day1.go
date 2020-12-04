@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/aymsoni29/advent-of-code/pkg/parser"
+	"github.com/advent-of-code/pkg/parser"
 )
 
 // Part1 of Day 1
