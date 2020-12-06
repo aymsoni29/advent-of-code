@@ -41,6 +41,7 @@ func Part1(filename string) int {
 		}
 	case 2:
 		fmt.Println("Approach: ", approach)
+		
 	case 3:
 		fmt.Println("Approach: ", approach)
 	case 4:
