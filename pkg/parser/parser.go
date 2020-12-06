@@ -2,6 +2,7 @@ package parser
 
 import (
 	"bufio"
+	"fmt"
 	"log"
 	"os"
 	"strconv"
@@ -11,6 +12,7 @@ import (
 func ParseTextFileToInt(filename string) []int {
 	file, err := os.Open(filename)
 	if err != nil {
+		fmt.Println(err)
 		log.Fatalf("Error reading file: %v", err)
 	}
 	defer file.Close()
@@ -26,6 +28,5 @@ func ParseTextFileToInt(filename string) []int {
 		}
 		output = append(output, num)
 	}
-
 	return output
 }
