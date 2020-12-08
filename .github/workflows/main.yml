@@ -2,7 +2,7 @@
 
 name: CI
 
-# Controls when the action will run. 
+# Controls when the action will run.
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
@@ -34,8 +34,3 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          
-      # Runs go lang ci lint on the project
-      - name: Run golangci-lint
-        uses: golangci/golangci-lint-action@v1.2.1
-
