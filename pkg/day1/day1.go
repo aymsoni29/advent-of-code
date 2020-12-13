@@ -18,7 +18,7 @@ func Part1(filename string) int {
 	input := parser.ParseTextFileToInt(filename)
 	ans := -1
 
-	switch approach := 1; approach {
+	switch approach := 2; approach {
 	case 1:
 		fmt.Println("Approach: ", approach)
 
@@ -41,7 +41,25 @@ func Part1(filename string) int {
 		}
 	case 2:
 		fmt.Println("Approach: ", approach)
-		
+
+		inputByCount := make(map[int]int)
+		for _, val := range input {
+			inputByCount[val]++
+		}
+
+		for _, val := range input {
+			if 2020-val == val {
+				if inputByCount[val] >= 2 {
+					ans = val * val
+					break
+				}
+			} else if count, ok := inputByCount[2020-val]; ok && count >= 1 {
+				fmt.Println(val)
+				ans = (2020 - val) * val
+				break
+			}
+		}
+		return ans
 	case 3:
 		fmt.Println("Approach: ", approach)
 	case 4:
