@@ -16,8 +16,6 @@ func Part1(filename string) int {
 	fmt.Println("Day 1 : Part 1")
 
 	input := parser.ParseTextFileToInt(filename)
-	ans := -1
-
 	switch approach := 2; approach {
 	case 1:
 		fmt.Println("Approach: ", approach)
@@ -31,8 +29,7 @@ func Part1(filename string) int {
 		j := len(input) - 1
 		for i < j {
 			if input[i]+input[j] == 2020 {
-				ans = input[i] * input[j]
-				return ans
+				return input[i] * input[j]
 			} else if input[i]+input[j] < 2020 {
 				i++
 			} else {
@@ -48,23 +45,23 @@ func Part1(filename string) int {
 		}
 
 		for _, val := range input {
-			if 2020-val == val {
-				if inputByCount[val] >= 2 {
-					ans = val * val
-					break
-				}
+			if 2020-val == val && inputByCount[val] >= 2 {
+				return val * val
 			} else if count, ok := inputByCount[2020-val]; ok && count >= 1 {
 				fmt.Println(val)
-				ans = (2020 - val) * val
-				break
+				return (2020 - val) * val
 			}
 		}
-		return ans
+		return -1
 	case 3:
 		fmt.Println("Approach: ", approach)
+		// TODO
 	case 4:
 		fmt.Println("Approach: ", approach)
+		// TODO 
 	}
 
-	return ans
+	return -1
 }
+
+func Part2()
