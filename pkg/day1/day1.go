@@ -64,16 +64,11 @@ func Part1(filename string) int {
 		fmt.Println("Approach: ", approach)
 	case 4:
 		fmt.Println("Approach: ", approach)
-<<<<<<< Updated upstream
-=======
 		// TODO
->>>>>>> Stashed changes
 	}
 
 	return ans
 }
-<<<<<<< Updated upstream
-=======
 
 // Part2 of Day1
 func Part2(filename string) int {
@@ -101,4 +96,3 @@ func Part2(filename string) int {
 	}
 	return -1
 }
->>>>>>> Stashed changes
