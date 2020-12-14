@@ -58,12 +58,11 @@ func Part1(filename string) int {
 		// TODO
 	case 4:
 		fmt.Println("Approach: ", approach)
-    // TODO
+		// TODO
 	}
 
 	return -1
 }
-
 
 // Part2 of Day1
 func Part2(filename string) int {
