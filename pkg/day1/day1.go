@@ -64,7 +64,41 @@ func Part1(filename string) int {
 		fmt.Println("Approach: ", approach)
 	case 4:
 		fmt.Println("Approach: ", approach)
+<<<<<<< Updated upstream
+=======
+		// TODO
+>>>>>>> Stashed changes
 	}
 
 	return ans
 }
+<<<<<<< Updated upstream
+=======
+
+// Part2 of Day1
+func Part2(filename string) int {
+	fmt.Println("Day 1 : Part 2")
+
+	input := parser.ParseTextFileToInt(filename)
+
+	inputByCount := make(map[int]int)
+	for _, val := range input {
+		inputByCount[val]++
+	}
+
+	for i := 0; i < len(input); i++ {
+		inputByCount[input[i]]--
+		for j := 1; j < len(input); j++ {
+			// We don't want to recount what we have in current iteration
+			inputByCount[input[j]]--
+			if inputByCount[2020-(input[i]+input[j])] >= 1 {
+				return input[i] * input[j] * (2020 - input[i] - input[j])
+			}
+			// Since we are done checking
+			inputByCount[input[j]]++
+		}
+		inputByCount[input[i]]++
+	}
+	return -1
+}
+>>>>>>> Stashed changes
