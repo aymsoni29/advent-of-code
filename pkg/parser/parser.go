@@ -11,10 +11,10 @@ import (
 
 // StructDay2 holds the necessary data for each test case
 type StructDay2 struct {
-	Min       int
-	Max       int
+	Min  int
+	Max  int
 	Char string
-	Pass  string
+	Pass string
 }
 
 // ParseTextFileToInt takes in a file and returns an array of integer
@@ -71,10 +71,10 @@ func ParseDay2Input(filename string) []StructDay2 {
 		password := fields[3]
 
 		data := StructDay2{
-			Min:       min,
-			Max:       max,
+			Min:  min,
+			Max:  max,
 			Char: character,
-			Pass:  password,
+			Pass: password,
 		}
 
 		output = append(output, data)

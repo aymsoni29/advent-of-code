@@ -19,3 +19,16 @@ func Part1(filename string) int {
 	}
 	return ans
 }
+
+func Part2(filename string) int {
+	input := parser.ParseDay2Input(filename)
+	ans := 0
+	for _, item := range input {
+		minChar := string(item.Pass[item.Min-1])
+		maxChar := string(item.Pass[item.Max-1])
+		if (minChar == item.Char || maxChar == item.Char) && minChar != maxChar {
+			ans++
+		}
+	}
+	return ans
+}
