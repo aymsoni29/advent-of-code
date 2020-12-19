@@ -43,7 +43,6 @@ func ParseTextFileToInt(filename string) []int {
 func ParseDay2Input(filename string) []StructDay2 {
 	file, err := os.Open(filename)
 	if err != nil {
-		fmt.Println(err)
 		log.Fatalf("Error reading file: %v", err)
 	}
 	defer file.Close()
